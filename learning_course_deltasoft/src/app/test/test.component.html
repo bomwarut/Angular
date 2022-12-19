@@ -32,14 +32,25 @@
 <app-action-bar [(counter)]="appCounter" [step]="10"></app-action-bar>
 <app-square-flex [divWidth]="appCounter"></app-square-flex>
 
-<!-- <h1>structural directive</h1>
+<h1>structural directive</h1>
 <h1 *ngIf="activate else template">this is view</h1>
 <ng-template #template>
     <h1>activate now</h1>
 </ng-template>
-<button (click)="activate=true">activate view</button> -->
+<button (click)="activate=true">activate view</button>
 
 <app-action-bar></app-action-bar>
+
+<h1>Array *ngfor</h1>
+<ul>
+    <li *ngFor="let customer of customerlist; let i = index">{{customer}}
+        <button (click)="removeCustomer(i)">remove</button>
+    </li>
+
+</ul>
+<button (click)="pushCustomer()">push</button>
+<button (click)="unshiftCustomer()">unshift</button>
+
 
 
 

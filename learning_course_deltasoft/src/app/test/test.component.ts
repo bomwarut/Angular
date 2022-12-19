@@ -43,4 +43,16 @@ squarewidth = 250;
 appCounter = 20;
 
 activate : boolean = false;
+
+customerlist : string[] = ['customer1','customer2'];
+
+pushCustomer(){
+  this.customerlist.push('customer' + (this.customerlist.length+1));
+}
+unshiftCustomer(){
+  this.customerlist.unshift('customer' + (this.customerlist.length+1));
+}
+removeCustomer(index :number){
+  this.customerlist.splice(index,1); 
+}
 }
