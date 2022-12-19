@@ -1,0 +1,31 @@
+<h1>------------- ทดสอบ Firebase --------------</h1>
+<form #Insertmember="ngForm" (ngSubmit)="insertMember(Insertmember.value)">
+    <h1>Add Member</h1>
+    <input type="text" ngModel id="role" name="role" placeholder="role">
+    <input type="text" ngModel id="first_name" name="first_name" placeholder="first_name">
+    <input type="text" ngModel id="last_name" name="last_name" placeholder="last_name">
+
+    <button type="submit" name="submit" id="savedata" value="insert">Insert</button>
+</form>
+
+<form #Searchdata="ngForm" (ngSubmit)="searchMember(Searchdata.value)">
+    <h1>Search Member</h1>
+    <input type="text" ngModel id="role" name="role" placeholder="role">
+    <button type="submit" name="submit" id="searchdata" value="search">Search</button>
+</form>
+
+<form #UpdateMember="ngForm" (ngSubmit)="updateMember(UpdateMember.value)">
+    <h1>Update Member</h1>
+    <input type="text" ngModel id="role" name="role" placeholder="role">
+    <input type="text" ngModel id="first_name" name="first_name" placeholder="first_name">
+    <input type="text" ngModel id="last_name" name="last_name" placeholder="last_name">
+
+    <button type="submit" name="submit" id="Updatedata" value="Update">Update</button>
+</form>
+
+<form #DeleteMember="ngForm" (ngSubmit)="deleteMember(DeleteMember.value)">
+    <h1>Delete Member</h1>
+    <input type="text" ngModel id="role" name="role" placeholder="role">
+    <button type="submit" name="submit" id="Deletedata" value="Delete">Delete</button>
+</form>
+

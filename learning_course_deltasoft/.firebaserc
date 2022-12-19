@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "angular15-1db2f": {
+      "hosting": {
+        "learning_course_deltasoft": [
+          "angular15-1db2f"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angular15-1db2f"
+  }
+}

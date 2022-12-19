@@ -1,0 +1,8 @@
+
+<li class="bookk" >
+    <img [src]= "book.image" [alt]= "book.name" width="100px">
+    <p class="title">{{book.name | titlecase}} by {{book.author | titlecase}}</p>
+    <p class="currency">{{book.amount | currency}}</p>  
+    <button *ngIf = "!isInCart"(click)="addToCart()">add to cart</button> 
+    <button *ngIf = "isInCart" (click)="removeFromCart()">Remove from cart</button> 
+</li>

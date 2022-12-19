@@ -1,0 +1,45 @@
+<h1>ทดสอบ Interpolate</h1>
+<button type="submit" (click)="Bleach()">Bleach {{name}}</button>
+<button type="submit" (click)="changename()">change name</button>
+<h2>{{chname}}</h2>
+
+<span>
+    มา 4 จ่าย 3
+</span>
+<div>
+    <input #pricebuffet type="text" placeholder="ราคาบุฟเฟต์">
+    <button (click)="claculate(pricebuffet.value)">คำนวณ</button>
+</div>
+<span>
+    คนละ {{value}} บาท
+</span>
+
+<h1>Properties binding กำหนดค่าตัวแปรออกไปใช้นอกcomponent</h1>
+<app-action-bar (counterChange)="testNumberChange($event)" [step]="5"></app-action-bar>
+<app-action-bar (counterChange)="testNumberChange($event)" [step]="10"></app-action-bar>
+<!-- <button type="button" (click)="testClick()">test</button> -->
+
+<app-max-min-meter [minlabel]="text2" [maxlabel]="text1"></app-max-min-meter>
+<app-square-flex [divHeight]="squareheight" [divWidth]="squarewidth"></app-square-flex>
+<div>
+    WIDTH:
+    <button (click)="squarewidth=50">50px</button>
+    <button (click)="squarewidth=100">100px</button>
+    <button (click)="squarewidth=200">200px</button>
+</div>
+
+<h1>[(twoWay)] input/output</h1>
+<app-action-bar [(counter)]="appCounter" [step]="10"></app-action-bar>
+<app-square-flex [divWidth]="appCounter"></app-square-flex>
+
+<!-- <h1>structural directive</h1>
+<h1 *ngIf="activate else template">this is view</h1>
+<ng-template #template>
+    <h1>activate now</h1>
+</ng-template>
+<button (click)="activate=true">activate view</button> -->
+
+<app-action-bar></app-action-bar>
+
+
+

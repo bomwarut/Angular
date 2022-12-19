@@ -1,0 +1,12 @@
+<div class="flex">
+<h1 class="mx-5 text-xl">movie list</h1>
+<button (click)="isShowing = !isShowing">Toggle</button>
+</div>
+
+<ul *ngIf="isShowing">
+    <ng-container *ngFor="let singlebook of book; let i = index">
+        <app-bookk [book]="singlebook"></app-bookk>
+    </ng-container>
+</ul>
+
+
